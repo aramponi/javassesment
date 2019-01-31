@@ -6,6 +6,7 @@ import static org.junit.Assert.*;
 
 public class CompressorTest {
 
+    @Test
     public void should_compress_a_given_string(){
         assertEquals("3A2B5A3B9C5A", Compressor.compress("AAABBAAAAABBBCCCCCCCCCAAAAA"));
         assertEquals("3A2B5A3B9C55", Compressor.compress("AAABBAAAAABBBCCCCCCCCC55555"));
