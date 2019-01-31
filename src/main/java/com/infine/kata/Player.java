@@ -1,5 +1,8 @@
 package com.infine.kata;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Player {
   private Weapon weapon;
   private String name;
@@ -14,17 +17,8 @@ public class Player {
   }
 
   public String action() {
-    if (this.weapon.type == "knife") {
-      return "Perform knife attack";
-    } else {
-      if (this.weapon.type == "revolver") {
-        return "Perform revolver attack";
-      } else {
-        if (this.weapon.type == "Plasma Gun") {
-          return "Perform plasma gun attack";
-        }
-      }
-    }
-    return "Unknown Action";
+      return weapon.getAttack();
+    
   }
+  
 }

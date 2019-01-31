@@ -7,13 +7,13 @@ import static org.junit.Assert.assertEquals;
 public class GameTest {
     @Test
     public void check_all_configuration() {
-        Player player = new Player("john", new Weapon("knife"));
+        Player player = new Player("john", new Knife("knife"));
         assertEquals("Perform knife attack", player.action());
 
-        player = new Player("john", new Weapon("revolver"));
+        player = new Player("john", new Revolver("revolver"));
         assertEquals("Perform revolver attack", player.action());
 
-        player = new Player("john", new Weapon("Plasma Gun"));
+        player = new Player("john", new PlasmaGun("Plasma Gun"));
         assertEquals("Perform plasma gun attack", player.action());
 
         player = new Player("john", new Weapon("Flame Thrower"));
