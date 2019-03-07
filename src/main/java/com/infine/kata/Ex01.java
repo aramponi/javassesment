@@ -5,16 +5,14 @@ import java.util.Map;
 
 public class Ex01 {
 
-
+    /*
+    implementer plusieurs version de la méthode 
+    qui retourne une map contenant le nombre de stations par ligne
+    v1) compatible java 7
+    v2) en utilisant les lambda
+    v3) faire une version parallèle
+    */
     Map<String, Long> countStationsGroupByLineId() {
-        Map<String, Long> numberOfStationsByLine = new HashMap<>();
-        for (Trafic trafic : Trafic.trafic) {
-            if (!numberOfStationsByLine.containsKey(trafic.getLine())) {
-                numberOfStationsByLine.put(trafic.getLine(), 1L);
-            } else {
-                numberOfStationsByLine.put(trafic.getLine(), numberOfStationsByLine.get(trafic.getLine()) + 1);
-            }
-        }
-        return numberOfStationsByLine;
+         return new HashMap<>();
     }
 }
