@@ -8,7 +8,7 @@ public class BankTest {
     @Test
     public void should_support_multitreading() throws InterruptedException {
         Bank bank = new Bank();
-        bank.createAccount(myAccount, 1000);
+        bank.createAccount(myAccount, 100000);
         Thread threadWidthDraw = new Thread(() -> {
             for (int i = 0; i < 10000; i++) {
                 bank.withdraw(myAccount, 1);
@@ -23,6 +23,6 @@ public class BankTest {
         threadDeposit.start();
         threadDeposit.join();
         threadWidthDraw.join();
-        assertEquals(1000, bank.getAmount(myAccount));
+        assertEquals(100000, bank.getAmount(myAccount));
     }
 }
